@@ -18,16 +18,19 @@ Field Merger is a simple GUI tool that merges two field images using vertical an
 - WSL2 on Windows
 
 For other platforms, modify the following sections as needed:
-```
-      - /mnt/c/Users:/mnt/windows
-```
-
-```
-        file_path = filedialog.askopenfilename(initialdir="/mnt/windows")
-```
+- `docker-compose.yml`
+    ```
+    - /mnt/c/Users:/mnt/windows
+    ```
+- `main.py`
+    ```
+    file_path = filedialog.askopenfilename(initialdir="/mnt/windows")
+    ```
 
 ## How to start
 ```
 docker-compose build
 docker-compose up
 ```
+
+![](img/recording.gif)
